@@ -1,0 +1,1 @@
+package com.atmospherebbdo.random.implementations {	/**	 * @author markhawley	 */	public interface IRNGImplementation 	{		function setSeed( s:uint ) :void;		function getSeed() :uint;		function random() :Number;	}}

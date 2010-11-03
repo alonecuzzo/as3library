@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../swfaddress.css" type="text/css" media="screen">
+<script type="text/javascript" language="javascript">window.onload = function(){top.setup()};</script>
+<meta content="SWFAddress,onChange,onExternalChange,onInit,onInternalChange,addEventListener,back,dispatchEvent,forward,getBaseURL,getHistory,getParameter,getParameterNames,getPath,getPathNames,getQueryString,getStatus,getStrict,getTitle,getTracker,getValue,go,hasEventListener,href,popup,removeEventListener,resetStatus,setHistory,setStatus,setStrict,setTitle,setTracker,setValue" name="keywords">
+<title>SWFAddress</title>
+</head>
+<body>
+<div>
+<h1>Class SWFAddress</h1>
+<p class="class-desc">
+     SWFAddress is distributed as a top level class. Projects that utilize 
+     code packages should use it with the com.asual.swfaddress package.
+     </p>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<h2>Public Properties</h2>
+<table id="summaryTableProperty">
+<tr>
+<td><a class="signatureLink" href="#onChange">onChange</a>:Function<div class="summaryTableDescription">[static]
+         Change event.</div>
+</td>
+</tr>
+<tr>
+<td><a class="signatureLink" href="#onExternalChange">onExternalChange</a>:Function<div class="summaryTableDescription">[static]
+         External change event.</div>
+</td>
+</tr>
+<tr>
+<td><a class="signatureLink" href="#onInit">onInit</a>:Function<div class="summaryTableDescription">[static]
+         Init event.</div>
+</td>
+</tr>
+<tr>
+<td><a class="signatureLink" href="#onInternalChange">onInternalChange</a>:Function<div class="summaryTableDescription">[static]
+         Internal change event.</div>
+</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<h2>Public Methods</h2>
+<table id="summaryTableMethod">
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#addEventListener()">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div>
+<div class="summaryTableDescription">[static]
+         Registers an event listener.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#back()">back</a>():void</div>
+<div class="summaryTableDescription">[static]
+         Loads the previous URL in the history list.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#dispatchEvent()">dispatchEvent</a>(event:Event):Boolean</div>
+<div class="summaryTableDescription">[static]
+         Dispatches an event to all the registered listeners.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#forward()">forward</a>():void</div>
+<div class="summaryTableDescription">[static]
+         Loads the next URL in the history list.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#up()">up</a>():void</div>
+<div class="summaryTableDescription">[static]
+         Navigates one level up in the deep linking path.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getBaseURL()">getBaseURL</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the base address of the document.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getHistory()">getHistory</a>():Boolean</div>
+<div class="summaryTableDescription">[static]
+         Provides the state of the history setting.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getParameter()">getParameter</a>(param:String):Object</div>
+<div class="summaryTableDescription">[static]
+         Provides the value of a specific query parameter as a string or array of strings.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getParameterNames()">getParameterNames</a>():Array</div>
+<div class="summaryTableDescription">[static]
+         Provides a list of all the query parameter names.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getPath()">getPath</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the deep linking value without the query string.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getPathNames()">getPathNames</a>():Array</div>
+<div class="summaryTableDescription">[static]
+         Provides a list of all the folders in the deep linking path.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getQueryString()">getQueryString</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the query string part of the deep linking value.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getStatus()">getStatus</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the status of the browser window.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getStrict()">getStrict</a>():Boolean</div>
+<div class="summaryTableDescription">[static]
+         Provides the state of the strict mode setting.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getTitle()">getTitle</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the title of the HTML document.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getTracker()">getTracker</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the tracker function.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#getValue()">getValue</a>():String</div>
+<div class="summaryTableDescription">[static]
+         Provides the current deep linking value.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#go()">go</a>(delta:Number):void</div>
+<div class="summaryTableDescription">[static]
+         Loads a URL from the history list.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#hasEventListener()">hasEventListener</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+         Checks the existance of any listeners registered for a specific type of event.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#href()">href</a>(url:String, target:String = "_self"):void</div>
+<div class="summaryTableDescription">[static]
+         Opens a new URL in the browser.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#popup()">popup</a>(url:String, name:String = "popup", options:String = "", handler:String = ""):void</div>
+<div class="summaryTableDescription">[static]
+         Opens a browser popup window.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#removeEventListener()">removeEventListener</a>(type:String, listener:Function):void</div>
+<div class="summaryTableDescription">[static]
+         Removes an event listener.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#resetStatus()">resetStatus</a>():void</div>
+<div class="summaryTableDescription">[static]
+         Resets the status of the browser window.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setHistory()">setHistory</a>(history:Boolean):void</div>
+<div class="summaryTableDescription">[static]
+         Enables or disables the creation of history entries.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setStatus()">setStatus</a>(status:String):void</div>
+<div class="summaryTableDescription">[static]
+         Sets the status of the browser window.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setStrict()">setStrict</a>(strict:Boolean):void</div>
+<div class="summaryTableDescription">[static]
+         Enables or disables the strict mode.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setTitle()">setTitle</a>(title:String):void</div>
+<div class="summaryTableDescription">[static]
+         Sets the title of the HTML document.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setTracker()">setTracker</a>(tracker:String):void</div>
+<div class="summaryTableDescription">[static]
+         Sets a function for page view tracking.</div>
+</td>
+</tr>
+<tr class="">
+<td>
+<div class="summarySignature">
+<a class="signatureLink" href="#setValue()">setValue</a>(value:String):void</div>
+<div class="summaryTableDescription">[static]
+         Sets the current deep linking value.</div>
+</td>
+</tr>
+</table>
+</div>
+<div>
+<a name="propertyDetail"></a>
+<h2>Property detail</h2>
+<a name="onChange"></a>
+<h3>onChange</h3>
+<div class="detailBody">
+<code>public static var onChange:Function</code><p>
+         Change event.
+         </p></div>
+<hr>
+<a name="onExternalChange"></a>
+<h3>onExternalChange</h3>
+<div class="detailBody">
+<code>public static var onExternalChange:Function</code><p>
+         External change event.
+         </p></div>
+<hr>
+<a name="onInit"></a>
+<h3>onInit</h3>
+<div class="detailBody">
+<code>public static var onInit:Function</code><p>
+         Init event.
+         </p></div>
+<hr>
+<a name="onInternalChange"></a>
+<h3>onInternalChange</h3>
+<div class="detailBody">
+<code>public static var onInternalChange:Function</code><p>
+         Internal change event.
+         </p></div>
+<hr>
+<a name="methodDetail"></a>
+<h2>Method detail</h2>
+<a name="addEventListener()"></a>
+<h3>addEventListener</h3>
+<div class="detailBody">
+<code>public static function addEventListener(type:String, listener:Function):void</code><p>
+         Registers an event listener.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">type</span>:String</code> &mdash; Event type.
+         </dd>
+<dd>
+<code><span class="label">listener</span>:Function</code> &mdash; Event listener.
+         </dd>
+<dd>
+<code><span class="label">useCapture</span>:Boolean</code> &mdash; Determines whether the listener works in the capture phase or the target and bubbling phases.
+         </dd>
+<dd>
+<code><span class="label">priority</span>:int</code> &mdash; The priority level of the event listener.
+         </dd>
+<dd>
+<code><span class="label">useWeakReference</span>:Boolean</code> &mdash; Determines whether the reference to the listener is strong or weak.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="back()"></a>
+<h3>back</h3>
+<div class="detailBody">
+<code>public static function back():void</code><p>
+         Loads the previous URL in the history list.
+         </p></div>
+<hr>
+<a name="dispatchEvent()"></a>
+<h3>dispatchEvent</h3>
+<div class="detailBody">
+<code>public static function dispatchEvent(event:Event):Boolean</code><p>
+         Dispatches an event to all the registered listeners. 
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">event</span>:Event</code> &mdash; Event object.
+         </dd>
+</dl>
+<dl>
+<dt>Returns</dt>
+<dd>
+<code>Boolean</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="forward()"></a>
+<h3>forward</h3>
+<div class="detailBody">
+<code>public static function forward():void</code><p>
+         Loads the next URL in the history list.
+         </p></div>
+<hr>
+<a name="getBaseURL()"></a>
+<h3>getBaseURL</h3>
+<div class="detailBody">
+<code>public static function getBaseURL():String</code><p>
+         Provides the base address of the document. 
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getHistory()"></a>
+<h3>getHistory</h3>
+<div class="detailBody">
+<code>public static function getHistory():Boolean</code><p>
+         Provides the state of the history setting. 
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>Boolean</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getParameter()"></a>
+<h3>getParameter</h3>
+<div class="detailBody">
+<code>public static function getParameter(param:String):Object</code><p>
+         Provides the value of a specific query parameter as a string or array of strings.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">param</span>:String</code> &mdash; Parameter name.
+         </dd>
+</dl>
+<dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getParameterNames()"></a>
+<h3>getParameterNames</h3>
+<div class="detailBody">
+<code>public static function getParameterNames():Array</code><p>
+         Provides a list of all the query parameter names.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>Array</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getPath()"></a>
+<h3>getPath</h3>
+<div class="detailBody">
+<code>public static function getPath():String</code><p>
+         Provides the deep linking value without the query string.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getPathNames()"></a>
+<h3>getPathNames</h3>
+<div class="detailBody">
+<code>public static function getPathNames():Array</code><p>
+         Provides a list of all the folders in the deep linking path.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>Array</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getQueryString()"></a>
+<h3>getQueryString</h3>
+<div class="detailBody">
+<code>public static function getQueryString():String</code><p>
+         Provides the query string part of the deep linking value.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getStatus()"></a>
+<h3>getStatus</h3>
+<div class="detailBody">
+<code>public static function getStatus():String</code><p>
+         Provides the status of the browser window.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getStrict()"></a>
+<h3>getStrict</h3>
+<div class="detailBody">
+<code>public static function getStrict():Boolean</code><p>
+         Provides the state of the strict mode setting. 
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>Boolean</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getTitle()"></a>
+<h3>getTitle</h3>
+<div class="detailBody">
+<code>public static function getTitle():String</code><p>
+         Provides the title of the HTML document.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getTracker()"></a>
+<h3>getTracker</h3>
+<div class="detailBody">
+<code>public static function getTracker():String</code><p>
+         Provides the tracker function.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="getValue()"></a>
+<h3>getValue</h3>
+<div class="detailBody">
+<code>public static function getValue():String</code><p>
+         Provides the current deep linking value.
+         </p><dl>
+<dt>Returns</dt>
+<dd>
+<code>String</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="go()"></a>
+<h3>go</h3>
+<div class="detailBody">
+<code>public static function go(delta:Number):void</code><p>
+         Loads a URL from the history list.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">delta</span>:Number</code> &mdash; An integer representing a relative position in the history list.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="hasEventListener()"></a>
+<h3>hasEventListener</h3>
+<div class="detailBody">
+<code>public static function hasEventListener(type:String):Boolean</code><p>
+         Checks the existance of any listeners registered for a specific type of event. 
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">type</span>:String</code> &mdash; Event type.
+         </dd>
+</dl>
+<dl>
+<dt>Returns</dt>
+<dd>
+<code>Boolean</code>
+</dd>
+</dl>
+</div>
+<hr>
+<a name="href()"></a>
+<h3>href</h3>
+<div class="detailBody">
+<code>public static function href(url:String, target:String = "_self"):void</code><p>
+         Opens a new URL in the browser. 
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">url</span>:String</code> &mdash; The resource to be opened.
+         </dd>
+<dd>
+<code><span class="label">target</span>:String</code> (default = "<code>_self</code>")<code></code> &mdash; Target window.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="popup()"></a>
+<h3>popup</h3>
+<div class="detailBody">
+<code>public static function popup(url:String, name:String = "popup", options:String = "", handler:String = ""):void</code><p>
+         Opens a browser popup window. 
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">url</span>:String</code> &mdash; Resource location.
+         </dd>
+<dd>
+<code><span class="label">name</span>:String</code> (default = "<code>popup</code>")<code></code> &mdash; Name of the popup window.
+         </dd>
+<dd>
+<code><span class="label">options</span>:String</code> (default = "<code></code>")<code></code> &mdash; Options which get evaluted and passed to the window.open() method.
+         </dd>
+<dd>
+<code><span class="label">handler</span>:String</code> (default = "<code></code>")<code></code> &mdash; Optional JavsScript handler code for popup handling.    
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="removeEventListener()"></a>
+<h3>removeEventListener</h3>
+<div class="detailBody">
+<code>public static function removeEventListener(type:String, listener:Function):void</code><p>
+         Removes an event listener.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">type</span>:String</code> &mdash; Event type.
+         </dd>
+<dd>
+<code><span class="label">listener</span>:Function</code> &mdash; Event listener.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="resetStatus()"></a>
+<h3>resetStatus</h3>
+<div class="detailBody">
+<code>public static function resetStatus():void</code><p>
+         Resets the status of the browser window.
+         </p></div>
+<hr>
+<a name="setHistory()"></a>
+<h3>setHistory</h3>
+<div class="detailBody">
+<code>public static function setHistory(history:Boolean):void</code><p>
+         Enables or disables the creation of history entries.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">history</span>:Boolean</code> &mdash; history History state.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="setStatus()"></a>
+<h3>setStatus</h3>
+<div class="detailBody">
+<code>public static function setStatus(status:String):void</code><p>
+         Sets the status of the browser window.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">status</span>:String</code> &mdash; Status value.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="setStrict()"></a>
+<h3>setStrict</h3>
+<div class="detailBody">
+<code>public static function setStrict(strict:Boolean):void</code><p>
+         Enables or disables the strict mode.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">strict</span>:Boolean</code> &mdash; strict Strict mode state.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="setTitle()"></a>
+<h3>setTitle</h3>
+<div class="detailBody">
+<code>public static function setTitle(title:String):void</code><p>
+         Sets the title of the HTML document.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">title</span>:String</code> &mdash; Title value.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="setTracker()"></a>
+<h3>setTracker</h3>
+<div class="detailBody">
+<code>public static function setTracker(tracker:String):void</code><p>
+         Sets a function for page view tracking. By default both 'urchinTracker' and 'pageTracker._trackPageview' are automatically invoked.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">tracker</span>:String</code> &mdash; Tracker function.
+         </dd>
+</dl>
+</div>
+<hr>
+<a name="setValue()"></a>
+<h3>setValue</h3>
+<div class="detailBody">
+<code>public static function setValue(value:String):void</code><p>
+         Sets the current deep linking value.
+         </p><dl>
+<dt>Parameters</dt>
+<dd>
+<code><span class="label">value</span>:String</code> &mdash; A value which will be appended to the base link of the HTML document.
+         </dd>
+</dl>
+</div>
+<hr>
+<p></p>
+</div>
+<p class="copyright">&copy; 2006-2009 Rostislav Hristov, Asual DZZD</p>
+</body>
+</html>
+<!-- -->

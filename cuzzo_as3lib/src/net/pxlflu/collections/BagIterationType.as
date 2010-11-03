@@ -1,0 +1,1 @@
+package com.atmospherebbdo.collections {	import com.atmospherebbdo.collections.IterationType;			/**	 * @author markhawley	 */	public class BagIterationType extends IterationType 	{		public static const DEFAULT:IterationType = new IterationType();	}}

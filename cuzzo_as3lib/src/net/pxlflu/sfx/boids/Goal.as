@@ -1,0 +1,1 @@
+package com.atmospherebbdo.sfx.boids {	import flash.display.MovieClip;			/**	 * @author markhawley	 * 	 * Something Boids either like or dislike.	 */	public class Goal extends MovieClip	{		private var strength:Number;				public function Goal( strength:Number )		{			this.strength = strength;		}	}}

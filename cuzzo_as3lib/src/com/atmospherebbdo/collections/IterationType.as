@@ -1,0 +1,1 @@
+package com.atmospherebbdo.collections {	/**	 * @author markhawley	 * 	 * Used in enums of types of iterators that work on collections.	 */	public class IterationType	{	}}

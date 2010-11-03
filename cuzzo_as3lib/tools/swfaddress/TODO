@@ -1,0 +1,2 @@
+Support for ';' in addition to '&' as a query parameters separator.
+Implementation of setParameter, setPath and setQueryString.

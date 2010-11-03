@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <!-- This should be before the title --> 
+    <%= swfaddress_optimizer_javascript_include %>
+    <title><%= @title %></title>
+    <%= swfaddress_javascript_includes %>
+    <%= stylesheet_link_tag 'def', :media => 'screen' %>
+  </head>
+  <body>
+    <div id="content">
+      <noscript>
+          <div>
+            <h1><%=link_to 'SWFAddress Website', root_url %></h1>
+            <ul>
+              <li><%=link_to 'SWFAddress Website / About', about_url %></li>
+              <li>
+                <%= link_to 'SWFAddress Website / Portfolio', portfolio_index_url %>
+                <ul>
+                  <li><%=link_to 'SWFAddress Website / Portfolio / 1', portfolio_url(1, :desc => true, :year => 2001)  %></li>
+                  <li><%=link_to 'SWFAddress Website / Portfolio / 2', portfolio_url(2, :desc => true)  %></li>
+                  <li><%=link_to 'SWFAddress Website / Portfolio / 3', portfolio_url(3, :desc => false, :year => 2001)  %></li>
+                </ul>
+              </li>
+              <li><%= link_to 'SWFAddress Website / Contact', contact_url %></li>
+            </ul>
+          </div>            
+
+          <div>
+            <%= yield %>
+          </div>
+      </noscript>
+    </div>
+
+    <script type="text/javascript">
+    // <![CDATA[
+        var so = new SWFObject('/swf/website.swf?datasource=/datasource', 'website', '100%', '100%', '8', '#CCCCCC', 'high');
+        so.addParam('menu', 'false');
+        so.write('content');
+    // ]]>
+    </script>
+  </body>
+</html>

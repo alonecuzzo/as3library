@@ -1,0 +1,1 @@
+package com.atmospherebbdo.collections {	/**	 * @author markhawley	 * 	 * Simple iterable interface.	 */	public interface IIterable 	{		function getIterator( type:IterationType=null ) :IIterator;	}}

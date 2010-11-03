@@ -1,0 +1,1 @@
+package com.atmospherebbdo.collections {	/**	 * @author markhawley	 * 	 * Simple iterable collections interface.	 */	public interface ICollection extends IIterable	{		function isEmpty() :Boolean;		function contains( obj:* ) :Boolean;		function add( obj:* ) :Boolean;		function remove( obj:* ) :Boolean;		function size() :uint;	}}

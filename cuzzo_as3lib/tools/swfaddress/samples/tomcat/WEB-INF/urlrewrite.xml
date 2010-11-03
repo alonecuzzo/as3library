@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+
+<urlrewrite>
+    
+    <rule>
+        <from>^/(?!index\.jsp|datasource\.jsp|website\.swf|images|swfobject|swfaddress|swffit)(.*)$</from>
+        <to>/index.jsp</to>
+    </rule>
+    
+</urlrewrite>
+

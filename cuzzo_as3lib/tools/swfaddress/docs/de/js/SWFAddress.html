@@ -1,0 +1,1443 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+    	<title>SWFAddress 2.1 Docs - SWFAddress</title>
+    	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    	<meta name="generator" content="JsDoc Toolkit 1.3.1">
+    	<link rel=stylesheet href="../../swfaddress.css" type="text/css" media="screen">
+        <script language="javascript" type="text/javascript">window.onload = function(){top.setup()};</script>
+    </head>
+    <body>
+        <h1>Klasse SWFAddress</h1>
+        
+        <p class="class-desc">
+Die SWFAddress-Klasse kann mit Query-Parameter konfiguriert werden, in folgendem Format:
+swfaddress.js?history=1&amp;tracker=pageTracker._trackPageview&amp;strict=1.<br /> 
+Die Liste der unterstützten Optionen enthält:<br />
+<br />
+<code>history:Boolean</code> - <span class="summaryTableDescription">Schaltet das Einfügen von History-Einträgen an oder aus</span>.<br />
+<code>strict:Boolean</code> - <span class="summaryTableDescription">Schaltet den Strict-Modus an oder aus</span>.<br />
+<code>tracker:String</code> - <span class="summaryTableDescription">Setzt eine Funktion für das Page-View-Tracking</span>.<br /></p>
+        
+            
+            
+        
+
+        
+
+        
+            <a name="method_summary"> </a> 
+            <h2>Public Methoden</h2>
+            <table>
+                
+
+            	
+            		<tr>
+            			<td>
+            				<a href="#addEventListener">addEventListener</a>(type, listener):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Registriert einen Event-Listener.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#addId">addId</a>(id):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Fügt die ID eines Flash-Objektes zur Liste der Flash-Objekte hinzu, die für das Deep-Linking registriert sind.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#back">back</a>():
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Lädt die vorherige URL aus der History-Liste.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#dispatchEvent">dispatchEvent</a>(event):
+                            
+                                Boolean
+                            
+                            <br>
+                            
+                            [static] 
+            				Schickt ein Event an alle registrierten Listener.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#forward">forward</a>():
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Lädt die nächste URL aus der History-Liste.
+            			</td>
+            		</tr>
+
+                    <tr>
+                        <td>
+                            <a href="#getBaseURL">getBaseURL</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+                            Gibt die Basis-Adresse des Dokumentes zuruck.
+                        </td>
+                    </tr>
+                                	
+            		<tr>
+            			<td>
+            				<a href="#getHistory">getHistory</a>():
+                            
+                                Boolean
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Status der History-Einstellung zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getId">getId</a>(index):
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt die ID des ersten und warscheinlich einzigen registrierten Flash-Objektes zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getIds">getIds</a>():
+                            
+                                Array
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt eine Liste aller registrierten Flash-Objekte zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getParameter">getParameter</a>(param):
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Wert eines spezifischen Query-Parameters zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getParameterNames">getParameterNames</a>():
+                            
+                                Array
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt eine Liste mit allen Query-Parameter-Namen zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getPath">getPath</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Deep-Link ohne Query-String zurück.
+            			</td>
+            		</tr>
+                
+                    <tr>
+                        <td>
+                            <a href="#getPathNames">getPathNames</a>():
+                            
+                                Array
+                            
+                            <br>
+                            
+                            [static] 
+                            Gibt eine Liste mit allen Ordnern des DeepLinking-Pfades zuruck.
+                        </td>
+                    </tr>
+                                	
+            		<tr>
+            			<td>
+            				<a href="#getQueryString">getQueryString</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Query-String des Deep-Links zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getStatus">getStatus</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Status im Browserfenster zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getStrict">getStrict</a>():
+                            
+                                Boolean
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Wert des Strict-Modus zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getTitle">getTitle</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den Titel des HTML-Dokumentes zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getTracker">getTracker</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt die Tracking-Funktion zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#getValue">getValue</a>():
+                            
+                                String
+                            
+                            <br>
+                            
+                            [static] 
+            				Gibt den aktuellen, gesamten Deep-Link zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#go">go</a>(delta):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Lädt eine URL aus der History-Liste.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#hasEventListener">hasEventListener</a>(event):
+                            
+                                Boolean
+                            
+                            <br>
+                            
+                            [static] 
+            				Überprüft die Existenz eines Listeners, der für ein bestimmtes Event registriert ist.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#href">href</a>(url, target):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Öffnet eine neue URL im Browser.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#popup">popup</a>(url, name, options, handler):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Öffnet ein neues Pop-Up-Fenster.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#removeEventListener">removeEventListener</a>(type, listener):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Entfernt einen Event-Listener.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#removeId">removeId</a>(id):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Entfernt die ID aus der Liste der Flash-Objekte, die für das Deep-Linking registriert sind.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#resetStatus">resetStatus</a>():
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt den Wert in der Browser-Statusleiste zurück.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setHistory">setHistory</a>(history):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Schaltet das Einfügen von History-Einträgen an oder aus.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setId">setId</a>(id):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt die ID eines Flash-Objektes, welches für das Deep-Linking registriert wird.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setStatus">setStatus</a>(status):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt den Wert der Browser-Statusleiste.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setStrict">setStrict</a>(strict):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Schaltet den Strict-Modus an oder aus.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setTitle">setTitle</a>(title):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt den Titel des HTML-Dokumentes.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setTracker">setTracker</a>(tracker):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt eine Funktion für das Page-View-Tracking.
+            			</td>
+            		</tr>
+            	
+            		<tr>
+            			<td>
+            				<a href="#setValue">setValue</a>(value):
+                            
+                                void
+                            
+                            <br>
+                            
+                            [static] 
+            				Setzt den aktuellen Wert des Deep-Links.
+            			</td>
+            		</tr>
+            	
+            </table>
+        
+
+        
+
+        
+
+        
+        
+            <a name="method_detail"> </a> 
+            <h2>Details Methoden</h2>
+
+            
+            
+            
+            
+
+                <a name="addEventListener"> </a>
+                <h3>addEventListener</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function addEventListener(type, listener):void
+                </code>
+            	<p>Registriert einen Event-Listener.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>type:String</code>  - Event-Typ. 
+                            </dd>
+                        
+                            <dd>
+                                <code>listener:Function</code>  - Event-Listener. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="addId"> </a>
+                <h3>addId</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function addId(id):void
+                </code>
+            	<p>Fügt die ID eines Flash-Objektes zur Liste der Flash-Objekte hinzu, die für das Deep-Linking registriert sind.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>id:String</code>  - ID des Objektes. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="back"> </a>
+                <h3>back</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function back():void
+                </code>
+            	<p>Lädt die vorherige URL aus der History-Liste.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="dispatchEvent"> </a>
+                <h3>dispatchEvent</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function dispatchEvent(event):Boolean
+                </code>
+            	<p>Schickt ein Event an alle registrierten Listener.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>event:Object</code>  - Event-Objekt. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Boolean</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="forward"> </a>
+                <h3>forward</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function forward():void
+                </code>
+            	<p>Lädt die nächste URL aus der History-Liste.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getBaseURL"> </a>
+                <h3>getBaseURL</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getBaseURL():String
+                </code>
+                <p>Gibt die Basis-Adresse des Dokumentes zuruck.</p>
+                <!-- METHOD PARAMETERS START -->
+                
+                <!-- METHOD PARAMETERS END -->
+                <!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                        <dt>Returns:</dt>
+                        
+                            <dd>
+                                <code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+                
+                <!-- ADDITIONAL ATTRIBUTES  END -->
+                <hr>
+                
+
+                <a name="getHistory"> </a>
+                <h3>getHistory</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getHistory():Boolean
+                </code>
+            	<p>Gibt den Status der History-Einstellung zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Boolean</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getId"> </a>
+                <h3>getId</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getId(index):String
+                </code>
+            	<p>Gibt die ID des ersten und warscheinlich einzigen registrierten Flash-Objektes zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>index</code>  
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getIds"> </a>
+                <h3>getIds</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getIds():Array
+                </code>
+            	<p>Gibt eine Liste aller registrierten Flash-Objekte zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Array</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getParameter"> </a>
+                <h3>getParameter</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getParameter(param):String
+                </code>
+            	<p>Gibt den Wert eines spezifischen Query-Parameters zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>param:String</code>  - Name der Eigenschaft. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getParameterNames"> </a>
+                <h3>getParameterNames</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getParameterNames():Array
+                </code>
+            	<p>Gibt eine Liste mit allen Query-Parameter-Namen zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Array</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getPath"> </a>
+                <h3>getPath</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getPath():String
+                </code>
+            	<p>Gibt den Deep-Link ohne Query-String zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+                <a name="getPathNames"> </a>
+                <h3>getPathNames</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getPathNames():Array
+                </code>
+                <p>Gibt eine Liste mit allen Ordnern des DeepLinking-Pfades zuruck.</p>
+                <!-- METHOD PARAMETERS START -->
+                
+                <!-- METHOD PARAMETERS END -->
+                <!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                        <dt>Returns:</dt>
+                        
+                            <dd>
+                                <code>Array</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+                
+                <!-- ADDITIONAL ATTRIBUTES  END -->
+                <hr>
+            
+
+                <a name="getQueryString"> </a>
+                <h3>getQueryString</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getQueryString():String
+                </code>
+            	<p>Gibt den Query-String des Deep-Links zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getStatus"> </a>
+                <h3>getStatus</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getStatus():String
+                </code>
+            	<p>Gibt den Status im Browserfenster zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getStrict"> </a>
+                <h3>getStrict</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getStrict():Boolean
+                </code>
+            	<p>Gibt den Wert des Strict-Modus zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Boolean</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getTitle"> </a>
+                <h3>getTitle</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getTitle():String
+                </code>
+            	<p>Gibt den Titel des HTML-Dokumentes zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getTracker"> </a>
+                <h3>getTracker</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getTracker():String
+                </code>
+            	<p>Gibt die Tracking-Funktion zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="getValue"> </a>
+                <h3>getValue</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function getValue():String
+                </code>
+            	<p>Gibt den aktuellen, gesamten Deep-Link zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>String</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="go"> </a>
+                <h3>go</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function go(delta):void
+                </code>
+            	<p>Lädt eine URL aus der History-Liste.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>delta:Number</code>  - Ein ganzzahliger Wert (Integer), der die relative Position in der History-Liste angibt.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="hasEventListener"> </a>
+                <h3>hasEventListener</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function hasEventListener(event):Boolean
+                </code>
+            	<p>Überprüft die Existenz eines Listeners, der für ein bestimmtes Event registriert ist.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>event:String</code>  - Event-Typ. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+                    <dl>
+                		<dt>Returns:</dt>
+                        
+                            <dd>
+                    			<code>Boolean</code>&nbsp; 
+                            </dd>
+                        
+                    </dl>
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="href"> </a>
+                <h3>href</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function href(url, target):void
+                </code>
+            	<p>Öffnet eine neue URL im Browser.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>url:String</code>  - Zieladresse.                            </dd>
+                        
+                            <dd>
+                                <code>target:String</code>  - Name des Browserfenster oder HTML-Frame.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="popup"> </a>
+                <h3>popup</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function popup(url, name, options, handler):void
+                </code>
+            	<p>Öffnet ein neues Pop-Up-Fenster.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd><code><span class="label">url</span>:String</code> &mdash; Zieladresse. </dd>
+                            <dd> <code><span class="label">name</span>:String</code> &mdash; Name des Pop-Up-Fenster. </dd>
+                            <dd> <code><span class="label">options</span>:String</code> &mdash; Werte, die überprüft und an die window.open()-Methode übergeben werden. </dd>
+                            <dd> <code><span class="label">handler</span>:String</code> &mdash; Optionaler JavaScript-Handler, um das Pop-Up-Fenster zu steuern.	</dd>
+                            </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="removeEventListener"> </a>
+                <h3>removeEventListener</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function removeEventListener(type, listener):void
+                </code>
+            	<p>Entfernt einen Event-Listener.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>type:String</code>  - Event-Typ. 
+                            </dd>
+                        
+                            <dd>
+                                <code>listener:Function</code>  - Event-Listener. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="removeId"> </a>
+                <h3>removeId</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function removeId(id):void
+                </code>
+            	<p>Entfernt die ID aus der Liste der Flash-Objekte, die für das Deep-Linking registriert sind.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>id:String</code>  - ID des Objektes. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="resetStatus"> </a>
+                <h3>resetStatus</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function resetStatus():void
+                </code>
+            	<p>Setzt den Wert in der Browser-Statusleiste zurück.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setHistory"> </a>
+                <h3>setHistory</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setHistory(history):void
+                </code>
+            	<p>Schaltet das Einfügen von History-Einträgen an oder aus.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>history:Boolean</code>  - Wert der History-Einstellung.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setId"> </a>
+                <h3>setId</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setId(id):void
+                </code>
+            	<p>Setzt die ID eines Flash-Objektes, welches für das Deep-Linking registriert wird.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>id:String</code>  - ID des Objektes. 
+                            </dd>
+                        
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setStatus"> </a>
+                <h3>setStatus</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setStatus(status):void
+                </code>
+            	<p>Setzt den Wert der Browser-Statusleiste.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>status:String</code>  - Wert in der Statusleiste.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setStrict"> </a>
+                <h3>setStrict</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setStrict(strict):void
+                </code>
+            	<p>Schaltet den Strict-Modus an oder aus.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>strict:Boolean</code>  - Status des Strict-Modus.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setTitle"> </a>
+                <h3>setTitle</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setTitle(title):void
+                </code>
+            	<p>Setzt den Titel des HTML-Dokumentes.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>title:String</code>  - Der Wert des Titels.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setTracker"> </a>
+                <h3>setTracker</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setTracker(tracker):void                </code>
+            	<p>Setzt eine Funktion für das Page-View-Tracking. Der Standardwert ist 'urchinTracker'.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>tracker:String</code>  - Tracking-Funktion.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+
+                <a name="setValue"> </a>
+                <h3>setValue</h3>
+                <code>
+                    public 
+                    
+                    static 
+                    function setValue(value):void
+                </code>
+            	<p>Setzt den aktuellen Wert des Deep-Links.</p>
+            	<!-- METHOD PARAMETERS START -->
+            	
+                    <dl>
+                		<dt>Parameters:</dt>
+                        
+                            <dd>
+                                <code>value:String</code>  - Der Wert, der hinter den Link des HTML-Dokumentes eingefügt wird.                            </dd>
+                    </dl>
+                
+            	<!-- METHOD PARAMETERS END -->
+            	<!-- ADDITIONAL ATTRIBUTES START -->
+                
+                
+            	
+            	<!-- ADDITIONAL ATTRIBUTES  END -->
+            	<hr>
+            
+        
+        <p class="copyright">&#169; 2006-2009 Rostislav Hristov, Asual DZZD. Übersetzung durch Eugen Pflüger.</p>
+    </body>
+</html>

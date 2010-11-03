@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><title>com.atmospherebbdo.functional Details</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'com.atmospherebbdo.functional package - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/atmospherebbdo/functional/package.html&amp;com/atmospherebbdo/functional/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Package</td><td class="titleTableSubNav" id="subNav" align="right"><a href="package.html#methodSummary">Functions</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Package"); titleBar_setSubNav(false,false,false	,false,false,false,false,false,false	,false,true,false,false,false);}	
+				-->
+			</script><div class="MainContent"><br><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Function</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#forEach()" class="signatureLink">forEach</a>(funcOrThisObj:Object, funcOrArray:Object, ... rest):void</div><div class="summaryTableDescription">
+	 Just like map, but returns nothing.</div></td><td class="summaryTableOwnerCol">com.atmospherebbdo.functional</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#map()" class="signatureLink">map</a>(funcOrThisObj:Object, funcOrArray:Object, ... rest):Array</div><div class="summaryTableDescription">
+	 Standard map function.</div></td><td class="summaryTableOwnerCol">com.atmospherebbdo.functional</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#reduce()" class="signatureLink">reduce</a>(funcOrThisObj:Object, funcOrArray:Object, arrayOrInitial:* = null, init:* = null):Object</div><div class="summaryTableDescription">
+	 Standard reduce function.</div></td><td class="summaryTableOwnerCol">com.atmospherebbdo.functional</td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader"> Function detail </div><a name="forEach()"></a><a name="forEach(Object,Object,restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">forEach</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td></tr></table><div class="detailBody"><code> public function forEach(funcOrThisObj:Object, funcOrArray:Object, ... rest):void</code><p></p><p></p><p>
+	 Just like map, but returns nothing.
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">funcOrThisObj</span>:Object</code> &mdash; Function or Object
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">funcOrArray</span>:Object</code> &mdash; 	Function or Array
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code>... <span class="label">rest</span></code> &mdash; 	variable number of Arrays to call func with.
+	 
+	 </td></tr></table></p><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalArgumentError </code> &mdash; if neither or the first two
+	 			arguments are functions.
+	 </td></tr></table></div><a name="map()"></a><a name="map(Object,Object,restParam)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">map</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function map(funcOrThisObj:Object, funcOrArray:Object, ... rest):Array</code><p></p><p></p><p>
+	 Standard map function. Returns an empty Array if no lists 
+	 of parameters are passed to the call.
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">funcOrThisObj</span>:Object</code> &mdash; Function or Object
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">funcOrArray</span>:Object</code> &mdash; 	Function or Array
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code>... <span class="label">rest</span></code> &mdash; 	variable number of Arrays to call func with.
+	 
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; Array	results of calls with the given arguments.
+	 
+	 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>IllegalArgumentError </code> &mdash; if neither or the first two
+	 			arguments are functions.
+	 </td></tr></table></div><a name="reduce()"></a><a name="reduce(Object,Object,,)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">reduce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">function</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function reduce(funcOrThisObj:Object, funcOrArray:Object, arrayOrInitial:* = null, init:* = null):Object</code><p></p><p></p><p>
+	 Standard reduce function. Reduce takes an array, a function or method 
+	 taking two arguments, and an optional starting value. It then applies
+	 the function given, taking the return value of the previous call as one 
+	 argument and the next element of the array supplied as the second
+	 argument. It returns the final result. For examples of this function in
+	 use, see the associated test cases in the tests directory.
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">funcOrThisObj</span>:Object</code> &mdash; Object to use as this in function (optional)
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">funcOrArray</span>:Object</code> &mdash; Function, takes two arguments
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">arrayOrInitial</span>:*</code> (default = <code>null</code>)<code></code> &mdash; Array, of arguments to be applied to func
+	 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">init</span>:*</code> (default = <code>null</code>)<code></code> &mdash; Object (optional). The default return value, and used as
+	 					the first argument to func if supplied.
+	 					
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; Object, the final result of func calls
+	 </td></tr></table></div><p></p><center class="copyright"><footer></footer><br/>Thu May 21 2009, 12:13 PM -04:00  </center></div></body></html>

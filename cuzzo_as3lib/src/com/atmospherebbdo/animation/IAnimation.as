@@ -1,0 +1,1 @@
+package com.atmospherebbdo.animation {	/**	 * @author markhawley	 * 	 * Interface for animations.	 */	public interface IAnimation	{		function stop() :void;		function start() :void;	}}

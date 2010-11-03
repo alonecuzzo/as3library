@@ -1,0 +1,1 @@
+package com.atmospherebbdo.util {	/**	 * Sort function for IComparable objects.	 * 	 * @param	a IComparable	 * @param	b IComparable	 * 	 * @return int (-1, 0, or 1)	 */	public function iComparableSort( a:IComparable, b:IComparable ) :int	{		if (a.greaterThan(b))		{			return 1;		}		else if (a.lessThan(b))		{			return -1;		}		else		{			return 0;		}	}}

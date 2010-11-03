@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SWFAddress Digger</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+        /*<![CDATA[*/
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                font: 76% Arial, "Helvetica Neue", sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #CCCCCC;
+            }
+            a {
+                color: #105CB6;
+            }
+            a:hover {
+                color: #000033;
+            }
+            .container {
+                width: 400px;
+                min-height: 100%;
+                margin: -1px auto 0;
+                padding: 0 40px;
+                background: #FFFFFF;
+                border-bottom: 1px solid #FFFFFF;
+                position: relative;
+            }
+            * html .container {
+                height: 100%;
+            }
+            .container h3 {
+                font-size: 260%;
+                margin: 0;
+                padding: 20px 0 4px;
+                letter-spacing: -2px;
+            }
+            .container h3 a {
+                text-decoration: none;
+                color: #666;
+            }
+            .content {
+                margin: 20px 0 40px;
+            }
+            .content h1 {
+                font-size: 100%;
+                margin: 0 0 2px 46px;
+                padding: 0;
+            }
+            .content .story h1 {
+                margin: 0 0 2px 62px;
+                font-size: 150%;
+            }
+            .content p {
+                margin: 0;
+                padding: 0;
+            }
+            .content div {
+                margin: 0 0 16px;
+                position: relative;
+                height: auto !important;
+                height: 34px;
+                min-height: 34px;
+            }
+            .content .info {
+                margin: 0 0 0 46px;
+                padding: 0;
+                font-size: 93%;
+                color: #777777;
+            }
+            .content .story .info {
+                margin: 0 0 0 62px;
+            }
+            .content .info img {
+                margin: 0 4px 0 0;
+                padding: 1px;
+                border: 1px solid #CCCCCC;
+                vertical-align: middle;
+            }
+            .content .info a {
+                text-decoration: none;
+            }
+            .content .date {
+                font-weight: bold;
+                color: #A12A2A;
+            }
+            .content .body {
+                margin: 6px 0 8px 62px;
+                padding: 0;
+                font-size: 100%;
+                line-height: 130%;
+                color: #393733;
+            }
+            .content .digg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+            }
+            .content .digg a {
+                background: url(http://digg.com/img/shade-compact.gif) no-repeat;
+                width: 37px;
+                height: 26px;
+                padding: 4px 0;
+                font-size: 76%;
+                display: block;
+                color: #93883F;
+                text-decoration: none;
+            }
+            .content .digg a strong {
+                display: block;
+                font-size: 120%;
+                line-height: 13px;
+            }
+            .content .digg iframe {
+                overflow: hidden;
+                width: 52px;
+                height: 82px;
+                border: 0 none;
+            }
+            .content a.diggs:hover strong {
+                color: #998D43;
+            }
+            .content .previous, .content .back {
+                margin: 10px 100px 10px 0;
+                float: left;
+            }
+            .content .previous a, .content .back a {
+                float: left;
+                padding: 0 8px 0 12px;
+                margin: 0;
+                background: url(http://m.digg.com/img/previous.gif) 0 50%;
+                font-weight: bold;
+                color: #FFFFFF;
+                text-decoration: none;
+                display: block;
+                height: 23px;
+                line-height: 23px;
+            }
+            .content .next {
+                margin: 10px 0;
+                float: right;
+            }
+            .content .next a {
+                float: right;
+                padding: 0 12px 0 8px;
+                margin: 0;
+                background: url(http://m.digg.com/img/next.gif) 100% 50%;
+                font-weight: bold;
+                color: #FFFFFF;
+                text-decoration: none;
+                display: block;
+                height: 23px;
+                line-height: 23px;
+            }
+            .copyright {
+                clear: both;
+                color: #999999;
+                font-size: 85%;
+                margin: 60px 0;
+            }
+            .copyright img {
+                float: left;
+                margin: 0 10px 0 0;
+            }
+        /*]]>*/
+        </style>
+        <script type="text/javascript" src="swfaddress/swfaddress.js"></script>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            (function() {
+
+                var pageAccess = false;
+                
+                var updateChange = function (response) {
+
+                    var onclick = 'SWFAddress.setValue(this.rel); return false;',
+                        html = '',
+                        timestamp = response.timestamp,
+                        total = response.total,
+                        offset = response.offset,
+                        count = response.count,
+                        page = offset/10 + 1,
+                        story,
+                        hours,
+                        minutes;
+                        
+                    if (typeof response.message != 'undefined') {
+
+                        html += 
+                            '<div class="page">' +
+                            '<p>' + response.message + '</p>' + 
+                            '</div>';
+                    
+                    } else if (offset > total) {
+                        
+                        html += 
+                            '<div class="page">' +
+                            '<p>No such page</p>' + 
+                            '</div>';
+                        
+                    } else if (SWFAddress.getPathNames()[0] == 'story') {
+
+                        story = response.stories[0];
+                        minutes = parseInt((timestamp - story.promote_date) / 60);
+                        hours = parseInt(minutes / 60);
+
+                        SWFAddress.setTitle(story.title);
+                        
+                        html += 
+                            '<div class="story">' +
+                            '<h1><a href="' + story.link + '">' + story.title + '</a></h1>' +
+                            '<p class="body">' + story.description + '</p>' +
+                            '<p class="info"><a href="http://digg.com/users/' + story.user.name + '"><img width="16" height="16" border="0" alt="mrlunix" src="' + story.user.icon + '">' + story.user.name + '</a> made popular <span class="date">' + (hours > 0 ? hours + ' hr ' : '') + (minutes % 60) + ' min ago</span></p>' + 
+                            '<p class="digg"><iframe src="http://digg.com/tools/diggthis.php?u=' + story.link + '" frameborder="0" scrolling="no"></iframe></p>' + 
+                            '</div>' + 
+                            '<div class="back"><a href="#" onclick="' + (pageAccess ? 'SWFAddress.back()' : 'SWFAddress.setValue(\'/\')') + '; return false;">Back</a></div>';
+                    
+                    } else {
+                        
+                        pageAccess = true;
+                        SWFAddress.setTitle('SWFAddress Digger');
+
+                        for (var i = 0; story = response.stories[i]; i++) {
+                            minutes = parseInt((timestamp - story.promote_date) / 60);
+                            hours = parseInt(minutes / 60);
+                            html += 
+                                '<div class="page">' +
+                                '<h1><a href="' + story.href + '" rel="/story/' + story.id + '" onclick="' + onclick + '">' + story.title + '</a></h1>' +
+                                '<p class="info"><span class="date">' + (hours > 0 ? hours + ' hr ' : '') + (minutes % 60) + ' min ago</span></p>' + 
+                                '<p class="digg"><a href="' + story.href + '" rel="/story/' + story.id + '" onclick="' + onclick + '"><strong>' + story.diggs + '</strong>diggs</a></p>' + 
+                                '</div>';
+                        }
+
+                        if (offset > 0) {
+                            html += '<div class="previous"><a href="#" rel="' + (page == 2 ? '/' : ('/page/' + (page - 1))) + '" onclick="' + onclick + '">Previous</a></div>';
+                        }
+
+                        if (offset + count < total) {
+                            html += '<div class="next"><a href="#" rel="/page/' + (page + 1) + '" onclick="' + onclick + '">Next</a></div>';
+                        }
+                    }
+                    
+                    html += '<div class="copyright">' + 
+                        '<img height="40" width="40" alt="" src="http://digg.com/img/little-digg.gif" /> &copy; Digg Inc. 2009 — Content posted by Digg users is <a href="http://creativecommons.org/licenses/publicdomain/" rel="license">dedicated to the public domain</a>.' + 
+                        'DIGG, DIGG IT, DUGG, DIGG THIS, Digg graphics, logos, designs, page headers, button icons, scripts, and other service names are the trademarks of Digg Inc.' + 
+                        '</div>';
+
+                    document.getElementById('content').innerHTML = html;
+                }
+                
+                var handleChange = function(event) {
+                    
+                    var server = 'http://services.digg.com',
+                        endpoint = event.value.indexOf('/story') == -1 ? '/stories/container/technology/popular' : event.value,
+                        appkey = 'http%3A%2F%2Fasual.com%2Fswfaddress',
+                        type = 'javascript',
+                        callback = 'callback' + (new Date()).getTime();
+                    
+                    if (event.pathNames[0] == 'page') {
+                        offset = parseInt(event.pathNames[1])*10 - 10;
+                    } else {
+                        offset = 0;
+                    }
+                    
+                    window[callback] = function(response) {
+                        updateChange(response);
+                        document.getElementsByTagName('head')[0].removeChild(arguments.callee.script);
+                        delete arguments.callee;
+                    }
+                    
+                    var request = document.createElement('script');
+                    request.setAttribute('type', 'text/javascript');
+                    request.setAttribute('src', server + endpoint + '?appkey=' + appkey + 
+                        '&type=' + type + '&callback=' + callback + '&offset=' + offset);
+                    
+                    window[callback].script = document.getElementsByTagName('head')[0].appendChild(request);
+                }
+                
+                SWFAddress.addEventListener(SWFAddressEvent.CHANGE, handleChange);
+
+            }());
+        /*]]>*/
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="header" class="header">
+                <h3><a href="./" onclick="SWFAddress.setValue(this.rel); this.blur(); return false;" rel="/">SWFAddress Digger</a></h3>
+            </div>
+            <div id="content" class="content"></div>
+        </div>
+    </body>
+</html>

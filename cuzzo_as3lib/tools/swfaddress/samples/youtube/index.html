@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>SWFAddress Tube</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />        
+        <style type="text/css">
+        /*<![CDATA[*/
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                font: 76% Arial, "Helvetica Neue", sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #CCCCCC;
+            }
+            a {
+                color: #205BAF;
+            }
+            .container {
+                width: 424px;
+                min-height: 100%;
+                margin: -1px auto 0;
+                padding: 0 28px;
+                background: #FFFFFF;
+                border-bottom: 1px solid #FFFFFF;
+            }
+            * html .container {
+                height: 100%;
+            }
+            .container h1 {
+                font-size: 260%;
+                margin: 0;
+                padding: 20px 0;
+                letter-spacing: -2px;
+            }            
+            .container h1 a {
+                text-decoration: none;
+                color: #666;
+            }
+        /*]]>*/            
+        </style>
+        <script type="text/javascript" src="swfobject/swfobject.js"></script>
+        <script type="text/javascript" src="swfaddress/swfaddress.js?history=0&amp;strict=0"></script>        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            var init = false;
+            var time = 0;
+            var seek = 0;
+            
+            function onSWFAddressChange(event) {
+                time = seek = parseInt(event.value);
+                ytplayer = document.getElementById('myytplayer');
+                ytplayer.seekTo(time, true);
+            }
+
+            function onYouTubePlayerReady(playerId) {
+                ytplayer = document.getElementById('myytplayer');
+                if (ytplayer) {
+                    updateYouTubePlayerInfo();
+                    ytplayer.addEventListener('onStateChange', 'onYouTubePlayerStateChange');
+                }
+            }
+
+            function onYouTubePlayerStateChange(newState) {
+                if (newState != -1 && !init) {
+                    init = true;
+                    ytplayer = document.getElementById('myytplayer');
+                    if (SWFAddress.getValue() != '') {
+                        time = parseInt(SWFAddress.getValue());
+                        ytplayer.seekTo(time, true);
+                    }
+                    SWFAddress.addEventListener('change', onSWFAddressChange);
+                }
+                if (newState == 2) {
+                    SWFAddress.setValue(String(parseInt(ytplayer.getCurrentTime())));
+                }
+            }
+
+            function updateYouTubePlayerInfo() {
+                ytplayer = document.getElementById('myytplayer');            
+                var currentTime = ytplayer.getCurrentTime();
+                if (seek == 0 && Math.abs(time - currentTime) > 5 && currentTime > 1) {
+                    SWFAddress.setValue(String(parseInt(currentTime)));
+                }
+                if (Math.abs(seek - currentTime) > 5) {
+                    seek = 0;
+                }
+                time = currentTime;
+                setTimeout(updateYouTubePlayerInfo, 250);
+            }
+
+            swfobject.embedSWF('http://www.youtube.com/v/ma9I9VBKPiw&amp;border=0&amp;enablejsapi=1&amp;playerapiid=ytplayer', 
+                'ytapiplayer', '425', '356', '8', null, null, {allowScriptAccess: 'always'},  {id: 'myytplayer'});
+        /*]]>*/
+        </script>       
+    </head>
+    <body>
+        <div class="container">
+            <h1><a href="../" onclick="SWFAddress.setValue(''); return false;">SWFAddress Tube</a></h1>
+            <div id="ytapiplayer">
+                You need Flash player 8+ and JavaScript enabled to view this video.
+            </div>
+        </div>    
+    </body>
+</html>

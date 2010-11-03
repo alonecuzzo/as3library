@@ -1,0 +1,1 @@
+package com.atmospherebbdo.animation {	/**	 * @author markhawley	 * 	 * Interface for things that are animatable.	 */	public interface IAnimatable 	{		function to( duration:Number, obj:* ) :IAnimation;		function from( duration:Number, obj:* ) :IAnimation;	}}

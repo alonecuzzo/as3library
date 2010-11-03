@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+    xmlns:mx="http://www.adobe.com/2006/mxml" 
+    xmlns:custom="*" 
+    horizontalAlign="left"
+    applicationComplete="initSWFAddress()"
+    currentStateChange="setSWFAddress()">
+    <mx:Script>
+        <![CDATA[
+        
+            private function initSWFAddress():void {
+                handleSWFAddress(new SWFAddressEvent(SWFAddressEvent.CHANGE));
+                SWFAddress.addEventListener(SWFAddressEvent.CHANGE, handleSWFAddress);
+            }
+
+            private function setSWFAddress():void {
+                Helper.setSWFAddress(this);
+            }
+            
+            private function handleSWFAddress(event:SWFAddressEvent):void {
+                Helper.handleSWFAddress(this, event);
+            }
+            
+        ]]>
+    </mx:Script>  
+    <mx:states>
+        <mx:State name="File">
+            <mx:SetProperty target="{contentText}" name="text" 
+                value="File content." />
+        </mx:State>
+        <mx:State name="Edit">
+            <mx:SetProperty target="{contentText}" name="text" 
+                value="Edit content." />
+            <mx:AddChild relativeTo="{contentText}" position="after">
+                <custom:Edit id="editView" path="edit" depth="1" />
+            </mx:AddChild>
+        </mx:State>
+        <mx:State name="View">
+            <mx:SetProperty target="{contentText}" name="text" 
+                value="View content." />
+        </mx:State>
+    </mx:states>
+    <mx:LinkButton id="contentHead" label="SWFAddress Application" 
+        click="currentState=''" fontSize="24" />
+        <mx:ApplicationControlBar width="100%">
+        <mx:LinkBar dataProvider="{['File','Edit','View']}" 
+            itemClick="{currentState=event.label}" />    
+    </mx:ApplicationControlBar>
+    <mx:Box width="100%" height="100%" paddingTop="10" 
+        paddingRight="10" paddingBottom="10" paddingLeft="10">
+        <mx:Box backgroundColor="0xFFFFFF" width="100%" height="100%" 
+            paddingTop="10" paddingRight="10" paddingBottom="10" paddingLeft="10">
+            <mx:Text id="contentText" width="100%" 
+                text="Welcome content." fontSize="16" />
+        </mx:Box>
+    </mx:Box>
+</mx:Application>

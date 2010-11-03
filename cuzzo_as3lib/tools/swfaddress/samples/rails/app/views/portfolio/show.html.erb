@@ -1,0 +1,6 @@
+<%=image_tag "#{params[:id]}.png", :size => "400x300", :alt => "Portfolio #{params[:id]}" -%>
+
+<%= "<br />Atlantic Hit Mix Calendar<br />" if params[:desc] == "true" -%>
+
+<%="#{params[:year]}<br />" unless params[:year].blank? -%>
+<br /><u><a href="http://www.sergeevstudio.com">Photos by Lyubomir Sergeev</a></u>

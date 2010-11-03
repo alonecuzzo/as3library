@@ -1,0 +1,1 @@
+package com.atmospherebbdo.collections {	import com.atmospherebbdo.collections.ICollection;		/**	 * @author markhawley	 * 	 * Set interface, adding in set operations	 */	public interface ISet extends ICollection 	{		function difference( other:ISet ) :ISet;		function union( other:ISet ) :ISet;		function intersection( other:ISet ) :ISet;	}}

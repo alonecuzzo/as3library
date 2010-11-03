@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Activity,org.flintparticles.common.activities.Activity,addedToEmitter,addedToEmitter,frameUpdate,getDefaultPriority,getDefaultPriority,initialize,initialize,removedFromEmitter,removedFromEmitter,update,update,update"><title>org.flintparticles.common.activities.Activity</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Activity - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?org/flintparticles/common/activities/Activity.html&amp;org/flintparticles/common/activities/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Activity</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Activity"); titleBar_setSubNav(false,false,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">org.flintparticles.common.activities</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Activity</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../../org/flintparticles/common/activities/ActivityBase.html">ActivityBase</a></td></tr></table><p></p><p></p><p></p>
+	 The Activity interface must be implemented by all emitter activities.
+	 
+	 An Activity is a class that is used to continuously modify an aspect 
+	 of an emitter by updating the emitter every frame. Activities may, for 
+	 example, move or rotate the emitter.
+	 
+	 Activities are associated with emitters by using the emitter's 
+	 addActivity method. Activities are removed from the emitter by using 
+	 the emitter's removeActivity method.
+	 
+	 <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addActivity()<br/>org.flintparticles.common.emitters.Emitter::removeActivity()</div><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addedToEmitter()" class="signatureLink">addedToEmitter</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</div><div class="summaryTableDescription">
+		 The addedToEmitter method is called by the emitter when the Activity is 
+		 added to it.</div></td><td class="summaryTableOwnerCol">Activity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultPriority()" class="signatureLink">getDefaultPriority</a>():Number</div><div class="summaryTableDescription">
+		 The getDefaultPriority method is used to order the execution of activities.</div></td><td class="summaryTableOwnerCol">Activity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#initialize()" class="signatureLink">initialize</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</div><div class="summaryTableDescription">
+		 The initialize method is used by the emitter to start the activity.</div></td><td class="summaryTableOwnerCol">Activity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removedFromEmitter()" class="signatureLink">removedFromEmitter</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</div><div class="summaryTableDescription">
+		 The removedFromEmitter method is called by the emitter when the Activity 
+		 is removed from it.</div></td><td class="summaryTableOwnerCol">Activity</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#update()" class="signatureLink">update</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>, time:Number):void</div><div class="summaryTableDescription">
+		 The update method is used by the emitter to apply the activity.</div></td><td class="summaryTableOwnerCol">Activity</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addedToEmitter()"></a><a name="addedToEmitter(org.flintparticles.common.emitters.Emitter)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addedToEmitter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addedToEmitter(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</code><p></p><p></p><p>
+		 The addedToEmitter method is called by the emitter when the Activity is 
+		 added to it. It is an opportunity for an activity to do any initializing
+		 that is relative to the emitter. Only a few activities make use of this
+		 method. It is called within the emitter's addActivity method and need not 
+		 be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that the Activity was added to.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addActivity()</div></div><a name="getDefaultPriority()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDefaultPriority</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultPriority():Number</code><p></p><p></p><p>
+		 The getDefaultPriority method is used to order the execution of activities.
+		 It should return a number indicating the priority for the execution of
+		 the activity. Activities with a higher priority are run before activities 
+		 with a lower priority.
+		 
+		 The activities within the Flint library use 0 as the default priority. 
+		 Activities that need to be called early would have priorities of 10 or 20. 
+		 Activities that need to be called late would have priorities of -10 or -20.
+		 
+		 The default priority can be overridden when adding an activity to
+		 an emitter by setting a new priority in the second parameter of the
+		 addActivity method of the emitter.
+		 
+		 The getDefaultPriority method is called internally by the emitter 
+		 and need not be called directly by the user.
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addActivity()</div></div><a name="initialize()"></a><a name="initialize(org.flintparticles.common.emitters.Emitter)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">initialize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function initialize(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</code><p></p><p></p><p>
+		 The initialize method is used by the emitter to start the activity.
+		 It is called within the emitter's start method and need not
+		 be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that is using the activity.
+		 </td></tr></table></p></div><a name="removedFromEmitter()"></a><a name="removedFromEmitter(org.flintparticles.common.emitters.Emitter)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removedFromEmitter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removedFromEmitter(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</code><p></p><p></p><p>
+		 The removedFromEmitter method is called by the emitter when the Activity 
+		 is removed from it. It is an opportunity for an activity to do any
+		 finalizing that is relative to the emitter. Only a few activities make 
+		 use of this method. It is called within the emitter's removeActivity 
+		 method and need not be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that the Activity was removed from.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::removeActivity()</div></div><a name="update()"></a><a name="update(org.flintparticles.common.emitters.Emitter,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function update(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>, time:Number):void</code><p></p><p></p><p>
+		 The update method is used by the emitter to apply the activity.
+		 It is the key feature of the activity and is used to update the state
+		 of the emitter. This method is called within the emitter's update loop 
+		 and need not be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that is using the activity.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">time</span>:Number</code> &mdash; The duration of the frame (in seconds) - used for time based 
+		 updates.
+		 </td></tr></table></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Thu May 21 2009, 12:12 PM -04:00  </center></div></body></html><!--<br/>Thu May 21 2009, 12:12 PM -04:00  -->

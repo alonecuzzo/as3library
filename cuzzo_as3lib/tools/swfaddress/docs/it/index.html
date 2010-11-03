@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+    <head>
+        <title>Manuale di SWFAddress 2.1</title>
+    	<meta http-equiv="content-type" content="text/html; charset=utf-8">        
+        <script language="javascript" type="text/javascript">
+        	<!--
+            function setup() {
+                var d = frames['classFrame'].document;
+                var tables = d.getElementsByTagName('table');
+                for (var i = 0, table; table = tables[i]; i++) {
+                    for (var j = 0, row; row = table.getElementsByTagName('tr')[j]; j++) {
+                        if (j % 2) {
+                            row.className = 'odd';
+                        }
+                    }
+                }
+                var d = frames['packageFrame'].document;
+                var links = d.getElementsByTagName('a');
+                for (var i = 0, link; link = links[i]; i++) {
+                    link.className = (link.href == frames['classFrame'].location.href) ? 'selected' : '';
+                }                
+            }
+            -->
+        </script>
+    </head>
+    <frameset cols="330,*">
+        <frame src="all-classes.html" name="packageFrame" frameborder="0" noresize>
+        <frame src="as/SWFAddress.html" name="classFrame" frameborder="0" noresize>
+        <noframes>
+        	<body>
+                <h1>SWFAddress 2.1 Docs</h1>
+                <p>This document is designed to be viewed using the frames feature. If you see this message, you are using a non-frame-capable web client.</p>
+            </body>
+        </noframes>
+    </frameset>
+</html>

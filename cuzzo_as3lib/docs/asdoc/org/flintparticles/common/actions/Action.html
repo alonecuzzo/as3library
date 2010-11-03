@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="Action,org.flintparticles.common.actions.Action,addedToEmitter,addedToEmitter,addedToEmitter,getDefaultPriority,getDefaultPriority,getDefaultPriority,getDefaultPriority,removedFromEmitter,removedFromEmitter,removedFromEmitter,update,update,update,update,update,update,update,update,update,update,update"><title>org.flintparticles.common.actions.Action</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Action - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?org/flintparticles/common/actions/Action.html&amp;org/flintparticles/common/actions/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Action</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Action"); titleBar_setSubNav(false,false,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">org.flintparticles.common.actions</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  Action</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../../org/flintparticles/common/actions/ActionBase.html">ActionBase</a></td></tr></table><p></p><p></p><p></p>
+	 The Action interface must be implemented by all particle actions.
+	 
+	 An Action is a class that is used to continuously modify an aspect 
+	 of a particle by updating the particle every frame. Actions may, for 
+	 example, move the particle or modify its velocity.
+	 
+	 Actions are directly associated with emitters and act on all
+	 particles created or added to that emitter. Actions are applied to 
+	 all particles created by an emitter by using the emitter's addAction 
+	 method. Actions are removed from the emitter by using the emitter's
+	 removeAction method.
+	 
+	 The key method in the Action interface is the update method.
+	 This is called every frame, for every particle and is where the
+	 action modifies the particle's properties.
+	 
+	 <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addAction()<br/>org.flintparticles.common.emitters.Emitter::removeAction()</div><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addedToEmitter()" class="signatureLink">addedToEmitter</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</div><div class="summaryTableDescription">
+		 The addedToEmitter method is called by the emitter when the Action is 
+		 added to it.</div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultPriority()" class="signatureLink">getDefaultPriority</a>():Number</div><div class="summaryTableDescription">
+		 The getDefaultPriority method is used to order the execution of actions.</div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removedFromEmitter()" class="signatureLink">removedFromEmitter</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</div><div class="summaryTableDescription">
+		 The removedFromEmitter method is called by the emitter when the Action 
+		 is removed from it.</div></td><td class="summaryTableOwnerCol">Action</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#update()" class="signatureLink">update</a>(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>, particle:<a href="../../../../org/flintparticles/common/particles/Particle.html">Particle</a>, time:Number):void</div><div class="summaryTableDescription">
+		 The update method is used by the emitter to apply the action
+		 to every particle.</div></td><td class="summaryTableOwnerCol">Action</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addedToEmitter()"></a><a name="addedToEmitter(org.flintparticles.common.emitters.Emitter)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addedToEmitter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addedToEmitter(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</code><p></p><p></p><p>
+		 The addedToEmitter method is called by the emitter when the Action is 
+		 added to it. It is an opportunity for an action to do any initializing
+		 that is relative to the emitter. Only a few actions make use of this
+		 method. It is called within the emitter's addAction method and need not 
+		 be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that the Action was added to.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addAction()</div></div><a name="getDefaultPriority()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDefaultPriority</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultPriority():Number</code><p></p><p></p><p>
+		 The getDefaultPriority method is used to order the execution of actions.
+		 It should return a number indicating the priority for the execution of
+		 the action. Actions with a higher priority are run before actions with
+		 a lower priority.
+		 
+		 The actions within the Flint library use 0 as the default priority. Some
+		 actions that need to be called early have priorities of 10 or 20. Actions
+		 that need to be called late have priorities of -10 or -20.
+		 
+		 For example, the move action has a priority of -20 because the movement
+		 should be performed last, after other actions have made any changes
+		 to the particle's velocity.
+		 
+		 The default priority can be overridden when adding an action to
+		 an emitter by setting a new priority in the second parameter of the
+		 addAction method of the emitter.
+		 
+		 The method is called internally by the emitter and need not be called 
+		 directly by the user.
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::addAction()</div></div><a name="removedFromEmitter()"></a><a name="removedFromEmitter(org.flintparticles.common.emitters.Emitter)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removedFromEmitter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removedFromEmitter(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>):void</code><p></p><p></p><p>
+		 The removedFromEmitter method is called by the emitter when the Action 
+		 is removed from it. It is an opportunity for an action to do any
+		 finalizing that is relative to the emitter. Only a few actions make 
+		 use of this method. It is called within the  emitter's removeAction 
+		 method and need not be called by the user.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that the Action was removed from.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso">org.flintparticles.common.emitters.Emitter::removeAction()</div></div><a name="update()"></a><a name="update(org.flintparticles.common.emitters.Emitter,org.flintparticles.common.particles.Particle,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function update(emitter:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a>, particle:<a href="../../../../org/flintparticles/common/particles/Particle.html">Particle</a>, time:Number):void</code><p></p><p></p><p>
+		 The update method is used by the emitter to apply the action
+		 to every particle. It is the key feature of the actions and is
+		 used to update the state of every particle every frame. This method 
+		 is called within the emitter's update loop for every particle 
+		 and need not be called by the user.
+		 
+		 Because the method is called for every particle, every frame it is
+		 a key area for optimization of the code. When creating a custom action
+		 it is usually worth making this method as efficient as possible.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">emitter</span>:<a href="../../../../org/flintparticles/common/emitters/Emitter.html">Emitter</a></code> &mdash; The Emitter that created the particle.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">particle</span>:<a href="../../../../org/flintparticles/common/particles/Particle.html">Particle</a></code> &mdash; The particle to be updated.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">time</span>:Number</code> &mdash; The duration of the frame - used for time based updates.
+		 </td></tr></table></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Thu May 21 2009, 12:12 PM -04:00  </center></div></body></html><!--<br/>Thu May 21 2009, 12:12 PM -04:00  -->

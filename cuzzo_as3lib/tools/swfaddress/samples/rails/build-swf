@@ -1,0 +1,1 @@
+mxmlc -file-specs flex/Website.mxml -output public/swf/website.swf -source-path flex 

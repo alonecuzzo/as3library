@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+# Enables mod_rewrite
+RewriteEngine on
+
+# Sets the base folder of the SEO sample
+RewriteBase  /swfaddress/samples/seo
+
+RewriteCond  %{REQUEST_FILENAME}    !-f
+RewriteCond  %{REQUEST_FILENAME}    !-d
+RewriteRule  .*                     index.php
+
+</IfModule>

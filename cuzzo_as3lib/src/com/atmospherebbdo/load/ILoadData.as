@@ -1,0 +1,1 @@
+package com.atmospherebbdo.load {	import flash.events.IEventDispatcher;			/**	 * @author markhawley	 * 	 * An interface for things loaded via an ILoader. Note that these are the	 * actual *things* loaded, not descriptions of them. The descriptions are	 * instances of LoadItemData.	 */	public interface ILoadData extends IEventDispatcher	{	}}

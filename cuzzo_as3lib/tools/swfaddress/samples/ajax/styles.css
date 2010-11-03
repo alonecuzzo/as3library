@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    font: 76% Arial, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #CCCCCC;
+}
+a {
+    color: #205BAF;
+}
+.container {
+    width: 400px;
+    min-height: 100%;
+    margin: -1px auto 0;
+    padding: 0 40px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    position: relative;
+}
+* html .container {
+    height: 100%;
+}
+.container h1 {
+    font-size: 260%;
+    margin: 0;
+    padding: 20px 0 4px;
+    letter-spacing: -2px;
+}            
+.container h1 a {
+    text-decoration: none;
+    color: #666;
+}              
+.container .navigation {
+    margin: 0 0 38px;
+    padding: 0;
+}
+.container .navigation li {
+    list-style: none;
+    display: inline;
+    font-size: 150%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 8px;
+    letter-spacing: -1px;
+}
+.container .navigation li a {
+    text-decoration: none;
+    color: #000;            
+}
+.container .navigation li a.selected {
+    color: #CC0000;            
+}            
+.content {
+    width: 100%;
+    clear: both;
+    margin: 0 0 40px;
+    padding: 0;
+    background: #FFFFFF;
+    min-height: 360px;
+    height: auto !important;
+    height: 360px;
+}
+.content p {
+    margin: 0;
+    padding: 0 0 1em;
+}
+.links ul {
+    margin: 0;
+    padding: 0;
+}
+.links li {
+    margin: 0 6px 0 0;
+    padding: 0;
+    display: inline;
+}
+.links li a {
+    text-decoration: none;
+}
+.links img {
+    border: 0;
+}
+.links p {
+    margin: 10px 0;
+}

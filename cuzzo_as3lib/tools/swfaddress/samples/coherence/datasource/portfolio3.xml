@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div>
+    <ul>
+        <li><a href="#/portfolio/1/" onclick="SWFAddress.setValue('/portfolio/1/'); return false;">/ 1</a></li>
+        <li><a href="#/portfolio/2/" onclick="SWFAddress.setValue('/portfolio/2/'); return false;">/ 2</a></li>
+        <li><a href="#/portfolio/3/" onclick="SWFAddress.setValue('/portfolio/3/'); return false;" class="selected">/ 3</a></li>
+    </ul>
+    <div id="image" class="image">
+        <img id="swfimage" src="images/3.png" alt="Portfolio 3" width="400" height="300" />
+    </div>
+    <p><a href="http://www.sergeevstudio.com">Photos by Lyubomir Sergeev</a></p>
+    <script type="text/javascript">
+    // <![CDATA[
+        swfobject.createSWF({
+            data: 'images/3.swf', 
+            width: '400',
+            height: '300'
+        }, {}, 'swfimage');
+    // ]]>
+    </script>
+</div>

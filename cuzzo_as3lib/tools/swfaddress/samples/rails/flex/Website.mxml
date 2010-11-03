@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<as:SWFAddressWebsite xmlns:as="com.asual.swfaddress.flex.*" xmlns:mx="http://www.adobe.com/2006/mxml" 
+    styleName="app" frameRate="31" change="onChange(event)">
+    
+    <mx:HTTPService id="dataSource" method="GET" result="onResult()" resultFormat="xml" />
+    
+    <mx:Style>
+        <![CDATA[
+            @font-face {
+                src: local("Helvetica Neue");
+                fontFamily: HelveticaNeueEmbedded;
+                fontWeight: normal;
+                unicodeRange: 
+                    U+0041-U+005A,
+                    U+0061-U+007A,
+                    U+0030-U+0039,
+                    U+0020-U+002F,
+                    U+003A-U+0040,
+                    U+005B-U+0060,
+                    U+007B-U+007E;
+            } 
+            @font-face {
+                src: local("Helvetica Neue");
+                fontFamily: HelveticaNeueEmbedded;
+                fontWeight: bold;
+                unicodeRange: 
+                    U+0041-U+005A,
+                    U+0061-U+007A,
+                    U+0030-U+0039,
+                    U+0020-U+002F,
+                    U+003A-U+0040,
+                    U+005B-U+0060,
+                    U+007B-U+007E;
+            }
+            .app {
+                color: #000000;
+                fontFamily: HelveticaNeueEmbedded;
+                fontSize: 12;
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 0;
+                backgroundGradientColors: #CCCCCC, #CCCCCC;
+                backgroundGradientAlphas: 1, 1;
+                horizontalAlign: center;
+            }
+            .container {
+                backgroundColor: #FFFFFF;
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 0;
+                verticalGap: 0;
+            }           
+            .header {
+                paddingTop: 18;
+                paddingRight: 0;
+                paddingBottom: 2;
+                paddingLeft: 34;
+                horizontalGap: 0;
+            }
+            .hlink {
+                letterSpacing: -2.5;
+                fontSize: 32;
+                fontWeight: bold;
+                color: #666666;
+                textRollOverColor: #666666;
+                textSelectedColor: #666666;
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 0;                
+                downSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                overSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                upSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+            }
+            .navigation {
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 36;
+                horizontalGap: 0;
+            }
+            .subnavigation {
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 104;
+                horizontalGap: 0;
+            }             
+            .link {
+                letterSpacing: -1;
+                fontSize: 18;
+                fontWeight: bold;
+                textRollOverColor: #000000;
+                textSelectedColor: #000000;
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 0;
+                downSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                overSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                upSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");                
+            }
+            .slink {
+                letterSpacing: -1;
+                fontSize: 18;
+                fontWeight: bold;
+                color: #CC0000;                
+                textRollOverColor: #CC0000;
+                textSelectedColor: #CC0000;
+                paddingTop: 0;
+                paddingRight: 0;
+                paddingBottom: 0;
+                paddingLeft: 0;
+                downSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                overSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+                upSkin: ClassReference("com.asual.swfaddress.flex.SWFAddressLinkSkin");
+            }
+            .content {
+                color: #333333;
+                paddingTop: 14;
+                paddingRight: 40;
+                paddingBottom: 14;
+                paddingLeft: 40;
+            }
+        ]]>
+    </mx:Style>
+    
+    <mx:Script>
+        <![CDATA[
+        
+            import com.asual.swfaddress.SWFAddress;
+            import com.asual.swfaddress.SWFAddressEvent;
+            
+            private function onChange(event:SWFAddressEvent):void {
+                
+                dataSource.url = event.path;
+                event.parameters['swf'] = true;
+                dataSource.send(event.parameters);
+                content.visible = false;
+                var title:String = 'SWFAddress Website';
+                for (var i:int = 0; i < event.pathNames.length; i++) {
+                    title += ' / ' + event.pathNames[i].substr(0,1).toUpperCase() + event.pathNames[i].substr(1);
+                }
+                SWFAddress.setTitle(title);
+            }
+
+            private function onResult():void {
+                content.htmlText = (dataSource.lastResult.toString()).replace(/width="400" \/>/, 'width="400" hspace="0" vspace="0" /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />');
+                content.visible = true;
+            }
+
+        ]]>
+    </mx:Script>
+    
+    <mx:Fade id="fadeIn" duration="1000" alphaFrom="0.0" alphaTo="1.0" />
+    
+    <mx:Box styleName="container" width="480" height="100%">
+
+        <mx:Box direction="horizontal" styleName="header">
+            <as:SWFAddressLink id="home" label="SWFAddress Website" href="/" styleName="hlink" />
+        </mx:Box>
+          
+        <mx:Box direction="horizontal" styleName="navigation">
+            <as:SWFAddressLink id="about" label="ABOUT" href="/about" styleName="{about.href == location ? 'slink' : 'link'}" />
+            <as:SWFAddressLink id="portfolio" label="PORTFOLIO" href="/portfolio" styleName="{(new RegExp(portfolio.href)).test(location) ? 'slink' : 'link'}" />
+            <as:SWFAddressLink id="contact" label="CONTACT" href="/contact" styleName="{contact.href == location ? 'slink' : 'link'}" />
+        </mx:Box>
+        
+        <mx:Box direction="horizontal" styleName="subnavigation" visible="{(new RegExp(portfolio.href)).test(location)}">
+            <as:SWFAddressLink id="portfolio1" label="/ 1" href="/portfolio/1?desc=true&amp;year=2001" styleName="{portfolio1.href == location ? 'slink' : 'link'}" paddingRight="5" />
+            <as:SWFAddressLink id="portfolio2" label="/ 2" href="/portfolio/2?desc=true" styleName="{portfolio2.href == location ? 'slink' : 'link'}" paddingRight="5" />
+            <as:SWFAddressLink id="portfolio3" label="/ 3" href="/portfolio/3?desc=false&amp;year=2001" styleName="{portfolio3.href == location ? 'slink' : 'link'}" paddingRight="5" />
+        </mx:Box>
+
+        <mx:Text id="content" styleName="content" selectable="true" width="100%" height="100%" showEffect="{fadeIn}" />
+        
+    </mx:Box>
+    
+</as:SWFAddressWebsite>

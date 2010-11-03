@@ -1,0 +1,128 @@
+body {
+    font: 82%/162% Arial, 'Helvetica Neu', sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 10px;
+}
+
+a {
+    color: #1B3A6D;
+}
+
+a:hover {
+    background: #1B3A6D;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+tr.odd {
+    background: #F5F8FB;   
+}
+
+th, td {
+    padding: 6px 10px;
+    font-size: 110%;
+}
+
+td a {
+    padding: 0 2px;
+}
+
+h1 {
+    font-size: 200%;
+    font-weight: normal;
+    letter-spacing: -1px;
+    padding: 0 0 20px;   
+    clear: both;
+}
+
+h1 {
+    font-size: 200%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 160%;
+    font-weight: normal;
+    margin: 10px 0 0;
+    padding: 5px 10px 4px;
+    background: #173665;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 130%;
+    font-weight:  normal;
+    margin: 10px 0 2px;
+    clear: both;
+}
+
+code {
+    font-size: 110%;
+    font-weight: bold;
+    color: #173665;  
+}
+
+hr {
+    border-color: #173665;
+    border-style: solid none none;
+    border-width: 1px;
+    height: 1px;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    height: 3.6em;
+}
+
+li {
+    margin: 0;
+    padding: 1px 0 0;
+    clear: both;
+    font-size: 110%;    
+}
+
+li a {
+    display: block;
+    float: left;
+    padding: 0 2px;    
+}
+
+li a.selected {
+    background: #E65B00;
+    color: #FFFFFF;
+    text-decoration: none;    
+}    
+
+p {
+    margin: 0 0 10px;
+}
+
+p.version {
+    margin: 0 0 20px;
+}
+
+p.class-desc {
+    margin: 15px 2px 25px;
+}
+
+p.class-desc code {
+    margin: 0 0 0 10px;
+}
+
+p.copyright {
+    color: #666666;
+    margin: 15px 0 0;
+}
